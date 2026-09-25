@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kloudhire — Right Jobs. Right People. Right Now.</title>
+    <meta
+      name="description"
+      content="A smarter way for professionals to find opportunities and employers to find the talent they need."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="bg-paper text-ink">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-pill focus:border-[3px] focus:border-ink focus:bg-pop-yellow focus:px-5 focus:py-2.5 focus:text-sm focus:font-extrabold focus:text-ink"
+      >Skip to content</a
+    >
+
+    <!-- Shared doodle definitions -->
+    <svg class="hidden" aria-hidden="true">
+      <defs>
+        <g id="doodle-face" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M30 38c4-6 10-6 13-1" />
+          <circle cx="33" cy="47" r="2.6" fill="currentColor" stroke="none" />
+          <circle cx="60" cy="47" r="2.6" fill="currentColor" stroke="none" />
+          <path d="M58 37 46 63h11" />
+          <path d="M40 74c6 4 13 3 18-3" />
+        </g>
+      </defs>
+    </svg>
+
+    <!-- Header -->
+    <header id="site-header" class="sticky top-0 z-40 border-b-[3px] border-ink bg-paper">
+      <div class="container-page">
+        <nav class="flex h-20 items-center justify-between gap-4" aria-label="Main">
+          <a href="#" class="flex items-center gap-3">
+            <span class="flex size-11 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+              <svg class="size-6" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M72 74c11 0 18-8 18-17s-8-16-17-16c-3-15-15-23-28-23-16 0-27 12-27 27-10 1-16 8-16 16s7 13 16 13z" />
+              </svg>
+            </span>
+            <span class="text-2xl font-extrabold tracking-tight">Kloudhire</span>
+          </a>
+
+          <!-- Desktop nav -->
+          <ul class="hidden items-center gap-2 lg:flex">
+            <li class="relative" data-dropdown>
+              <button
+                type="button"
+                class="flex items-center gap-1.5 rounded-pill border-[3px] border-transparent px-4 py-2 text-sm font-bold transition-colors hover:border-ink"
+                aria-expanded="false"
+                aria-controls="jobs-menu"
+                data-dropdown-trigger
+              >
+                Jobs
+                <svg class="size-4 transition-transform" data-dropdown-chevron viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <ul
+                id="jobs-menu"
+                class="absolute left-0 top-[calc(100%+0.5rem)] hidden w-56 rounded-2xl border-[3px] border-ink bg-white p-2 shadow-ink"
+                data-dropdown-menu
+              >
+                <li><a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">Sales jobs</a></li>
+                <li><a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">Marketing jobs</a></li>
+                <li><a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">Data Science jobs</a></li>
+                <li><a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">HR jobs</a></li>
+                <li><a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">Engineering jobs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="block rounded-pill border-[3px] border-transparent px-4 py-2 text-sm font-bold transition-colors hover:border-ink" href="#advisor">Career Advisor</a>
+            </li>
+            <li>
+              <a class="block rounded-pill border-[3px] border-transparent px-4 py-2 text-sm font-bold transition-colors hover:border-ink" href="#">Post A Free Job</a>
+            </li>
+          </ul>
+
+          <div class="hidden items-center gap-3 lg:flex">
+            <a href="#" class="btn-pop bg-white">Register</a>
+            <a href="#" class="btn-ink">Login</a>
+          </div>
+
+          <!-- Mobile toggle -->
+          <button
+            type="button"
+            class="inline-flex size-12 items-center justify-center rounded-xl border-[3px] border-ink bg-white shadow-ink-sm lg:hidden"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-nav-toggle
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <svg class="size-6" data-nav-icon-open viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg class="hidden size-6" data-nav-icon-close viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Mobile sheet -->
+      <div id="mobile-menu" class="hidden border-t-[3px] border-ink bg-white lg:hidden">
+        <div class="container-page space-y-1 py-5">
+          <p class="px-3 pb-1 text-xs font-extrabold uppercase tracking-[0.18em] text-ink/50">Jobs</p>
+          <a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">Sales jobs</a>
+          <a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">Marketing jobs</a>
+          <a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">Data Science jobs</a>
+          <a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">HR jobs</a>
+          <a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#featured">Engineering jobs</a>
+          <hr class="my-3 border-t-[3px] border-ink" />
+          <a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#advisor">Career Advisor</a>
+          <a class="block rounded-xl px-3 py-2 text-sm font-bold hover:bg-pop-yellow" href="#">Post A Free Job</a>
+          <div class="grid gap-3 pt-4 sm:grid-cols-2">
+            <a href="#" class="btn-pop w-full bg-white">Register</a>
+            <a href="#" class="btn-ink w-full">Login</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="relative overflow-hidden border-b-[3px] border-ink">
+        <div class="pointer-events-none absolute -left-24 top-16 size-64 rounded-full bg-pop-blue/20" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -right-20 bottom-0 size-72 rounded-full bg-pop-red/15" aria-hidden="true"></div>
+
+        <div class="container-page relative py-16 sm:py-24">
+          <!-- Floating doodle stickers
+          <span class="pointer-events-none absolute left-0 top-10 hidden size-24 -rotate-6 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red shadow-ink lg:flex" aria-hidden="true">
+            <svg class="size-12" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M36 44a14 14 0 1 1 28 0c0 8-6 11-6 18H42c0-7-6-10-6-18Z" /><path d="M42 70h16M44 78h12" />
+            </svg>
+          </span>
+          <span class="halftone pointer-events-none absolute bottom-16 left-10 hidden size-28 rotate-3 items-center justify-center rounded-full border-[3px] border-ink bg-white shadow-ink xl:flex" aria-hidden="true">
+            <svg class="size-16 text-ink" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+          </span>
+          <span class="pointer-events-none absolute right-0 top-14 hidden size-24 rotate-6 items-center justify-center rounded-full border-[3px] border-ink bg-white shadow-ink lg:flex" aria-hidden="true">
+            <svg class="size-14 text-ink" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+          </span>
+          <span class="pointer-events-none absolute bottom-16 right-8 hidden size-28 -rotate-3 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue shadow-ink xl:flex" aria-hidden="true">
+            <svg class="size-14" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="18" y="18" width="64" height="64" rx="4" /><path d="m32 52 13 14 24-30" />
+            </svg>
+          </span>
+ -->
+          <div class="relative mx-auto max-w-3xl text-center">
+            <span class="inline-flex items-center gap-2 rounded-pill border-[3px] border-ink bg-white px-4 py-1.5 text-xs font-extrabold shadow-ink-sm">
+              <span class="size-2.5 rounded-full bg-pop-red" aria-hidden="true"></span>
+              600+ open roles across the US
+            </span>
+
+            <h1 class="mt-7 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              Right Jobs. Right People.
+              <span class="relative inline-block">
+                <span class="absolute inset-x-0 bottom-1 -z-10 h-4 -rotate-1 bg-pop-yellow sm:h-5" aria-hidden="true"></span>
+                Right Now.
+              </span>
+            </h1>
+
+            <p class="mx-auto mt-6 max-w-2xl text-base font-medium leading-relaxed text-ink/75 sm:text-lg">
+              A smarter way for professionals to find opportunities and employers to find the talent
+              they need. Skip the search, spark your career — Kloudhire connects you to opportunities.
+            </p>
+
+            <form class="mx-auto mt-9 rounded-[1.75rem] border-[3px] border-ink bg-white p-3 text-left shadow-ink lg:rounded-pill" action="#featured">
+              <div class="flex flex-col gap-3 lg:flex-row lg:items-center">
+                <div class="flex flex-1 items-center gap-3 rounded-pill border-[3px] border-ink px-4 py-2.5 lg:border-0 lg:py-1">
+                  <svg class="size-5 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" aria-hidden="true">
+                    <circle cx="44" cy="44" r="28" /><path d="m66 66 22 22" />
+                  </svg>
+                  <label for="ill-keyword" class="sr-only">Job title, skill or keyword</label>
+                  <input
+                    id="ill-keyword"
+                    name="keyword"
+                    type="search"
+                    placeholder="Job title, skill or keyword"
+                    pattern="[A-Za-z0-9 .\-/+#]*"
+                    title="Special characters are not allowed"
+                    class="w-full border-0 bg-transparent p-0 text-sm font-semibold placeholder:font-medium placeholder:text-ink/45 focus:outline-none"
+                  />
+                </div>
+
+                <span class="hidden h-9 w-[3px] shrink-0 bg-ink lg:block" aria-hidden="true"></span>
+
+                <div class="flex flex-col gap-3 lg:flex-row lg:items-center">
+                  <div class="flex flex-1 items-center gap-3 rounded-pill border-[3px] border-ink px-4 py-2.5 lg:w-56 lg:flex-none lg:border-0 lg:py-1">
+                    <svg class="size-5 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M50 92C68 74 78 58 78 42a28 28 0 1 0-56 0c0 16 10 32 28 50Z" /><circle cx="50" cy="41" r="10" />
+                    </svg>
+                    <label for="ill-location" class="sr-only">Location</label>
+                    <select id="ill-location" name="location" class="w-full border-0 bg-transparent p-0 text-sm font-semibold focus:outline-none">
+                        <option value="">Location</option>
+                        <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+                        <option>Arkansas</option><option>California</option><option>Colorado</option>
+                        <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+                        <option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+                        <option>Illinois</option><option>Indiana</option><option>Iowa</option>
+                        <option>Kansas</option><option>Kentucky</option><option>Louisiana</option>
+                        <option>Maine</option><option>Maryland</option><option>Massachusetts</option>
+                        <option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+                        <option>Missouri</option><option>Montana</option><option>Nebraska</option>
+                        <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
+                        <option>New Mexico</option><option>New York State</option><option>North Carolina</option>
+                        <option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+                        <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+                        <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
+                        <option>Texas</option><option>Utah</option><option>Vermont</option>
+                        <option>Virginia</option><option>Washington</option><option>West Virginia</option>
+                      <option>Wisconsin</option><option>Wyoming</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn-ink shrink-0">Find Job</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="mt-7 flex flex-wrap items-center justify-center gap-2 text-sm">
+              <span class="font-bold">Popular Searches:</span>
+              <a class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-bold transition-colors hover:bg-pop-yellow" href="#featured">Developer</a>
+              <a class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-bold transition-colors hover:bg-pop-yellow" href="#featured">Designer</a>
+              <a class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-bold transition-colors hover:bg-pop-yellow" href="#featured">Architect</a>
+              <a class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-bold transition-colors hover:bg-pop-yellow" href="#featured">Engineer</a>
+            </div>
+
+            <ul class="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+              <li class="text-center">
+                <p class="text-2xl font-extrabold sm:text-3xl">600+</p>
+                <p class="mt-0.5 text-xs font-bold uppercase tracking-[0.14em] text-ink/55">Open roles</p>
+              </li>
+              <li class="hidden size-2.5 rounded-full bg-pop-red sm:block" aria-hidden="true"></li>
+              <li class="text-center">
+                <p class="text-2xl font-extrabold sm:text-3xl">15</p>
+                <p class="mt-0.5 text-xs font-bold uppercase tracking-[0.14em] text-ink/55">Top recruiters</p>
+              </li>
+              <li class="hidden size-2.5 rounded-full bg-pop-blue sm:block" aria-hidden="true"></li>
+              <li class="text-center">
+                <p class="text-2xl font-extrabold sm:text-3xl">6</p>
+                <p class="mt-0.5 text-xs font-bold uppercase tracking-[0.14em] text-ink/55">Categories</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section id="categories" class="scroll-mt-28 border-b-[3px] border-ink py-16 sm:py-20">
+        <div class="container-page">
+          <div class="max-w-2xl">
+            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-pop-red">Explore by Category</p>
+            <h2 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Skills in Demand: Find Your Perfect Fit</h2>
+            <p class="mt-4 text-base font-medium text-ink/70">Browse the roles employers are hiring for most right now.</p>
+          </div>
+
+          <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <li>
+              <a href="#featured" class="ink-card group flex h-full flex-col p-6 transition-transform hover:-translate-y-1">
+                <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red" aria-hidden="true">
+                  <svg class="size-8" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 72 42 44l16 16 28-32" /><path d="M64 28h22v22" />
+                  </svg>
+                </span>
+                <h3 class="mt-5 text-xl font-extrabold">Sales</h3>
+                <p class="mt-1 text-sm font-bold text-ink/60">350+ Jobs</p>
+                <span class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold">
+                  Browse roles
+                  <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#featured" class="ink-card group flex h-full flex-col p-6 transition-transform hover:-translate-y-1">
+                <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue" aria-hidden="true">
+                  <svg class="size-8" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 40v20a4 4 0 0 0 4 4h12l24 16V20L30 36H18a4 4 0 0 0-4 4Z" /><path d="M72 34a24 24 0 0 1 0 32" />
+                  </svg>
+                </span>
+                <h3 class="mt-5 text-xl font-extrabold">Marketing</h3>
+                <p class="mt-1 text-sm font-bold text-ink/60">150+ Jobs</p>
+                <span class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold">
+                  Browse roles
+                  <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#featured" class="ink-card group flex h-full flex-col p-6 transition-transform hover:-translate-y-1">
+                <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                  <svg class="size-8" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M50 14v72M24 34h52" /><circle cx="30" cy="64" r="14" /><circle cx="70" cy="64" r="14" />
+                  </svg>
+                </span>
+                <h3 class="mt-5 text-xl font-extrabold">Business Development</h3>
+                <p class="mt-1 text-sm font-bold text-ink/60">50+ Jobs</p>
+                <span class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold">
+                  Browse roles
+                  <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#featured" class="ink-card group flex h-full flex-col p-6 transition-transform hover:-translate-y-1">
+                <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue" aria-hidden="true">
+                  <svg class="size-8" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="14" y="20" width="72" height="50" rx="6" /><path d="M36 84h28M30 38h20M30 54h40" />
+                  </svg>
+                </span>
+                <h3 class="mt-5 text-xl font-extrabold">UI/UX Designer</h3>
+                <p class="mt-1 text-sm font-bold text-ink/60">50+ Jobs</p>
+                <span class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold">
+                  Browse roles
+                  <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#featured" class="ink-card group flex h-full flex-col p-6 transition-transform hover:-translate-y-1">
+                <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                  <svg class="size-8" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 56V48a30 30 0 0 1 60 0v8" /><rect x="8" y="54" width="16" height="24" rx="8" /><rect x="76" y="54" width="16" height="24" rx="8" /><path d="M80 78v4a8 8 0 0 1-8 8h-10" />
+                  </svg>
+                </span>
+                <h3 class="mt-5 text-xl font-extrabold">Customer Services</h3>
+                <p class="mt-1 text-sm font-bold text-ink/60">10+ Jobs</p>
+                <span class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold">
+                  Browse roles
+                  <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#featured" class="ink-card group flex h-full flex-col p-6 transition-transform hover:-translate-y-1">
+                <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red" aria-hidden="true">
+                  <svg class="size-8" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="20" y="12" width="60" height="76" rx="8" /><path d="M34 34h32M34 50h32M34 66h18" />
+                  </svg>
+                </span>
+                <h3 class="mt-5 text-xl font-extrabold">Accounting &amp; Finance</h3>
+                <p class="mt-1 text-sm font-bold text-ink/60">10+ Jobs</p>
+                <span class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold">
+                  Browse roles
+                  <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Featured Openings -->
+      <section id="featured" class="scroll-mt-28 border-b-[3px] border-ink bg-white py-16 sm:py-20">
+        <div class="container-page">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div class="max-w-2xl">
+              <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-pop-blue">Land Your Dream Role</p>
+              <h2 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Featured Openings</h2>
+            </div>
+            <a href="#" class="btn-pop self-start bg-white sm:self-auto">
+              All Jobs
+              <svg class="size-5" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+            </a>
+          </div>
+
+          <ul class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <li class="ink-card group flex h-full flex-col bg-paper p-6 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex size-14 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue text-ink" aria-hidden="true">
+                  <svg class="size-9" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+                </span>
+                <span class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-extrabold">Remote</span>
+              </div>
+              <h3 class="mt-5 text-xl font-extrabold leading-snug">Snowflake Developer</h3>
+              <p class="mt-2 flex items-center gap-2 text-sm font-bold text-ink/65">
+                <svg class="size-4 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M50 92C68 74 78 58 78 42a28 28 0 1 0-56 0c0 16 10 32 28 50Z" /><circle cx="50" cy="41" r="9" /></svg>
+                Remote Work
+              </p>
+              <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold">
+                Browse Job
+                <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+              </a>
+            </li>
+
+            <li class="ink-card group flex h-full flex-col bg-paper p-6 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex size-14 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow text-ink" aria-hidden="true">
+                  <svg class="size-9" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+                </span>
+                <span class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-extrabold">On-Site</span>
+              </div>
+              <h3 class="mt-5 text-xl font-extrabold leading-snug">Java Developer</h3>
+              <p class="mt-2 flex items-center gap-2 text-sm font-bold text-ink/65">
+                <svg class="size-4 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M50 92C68 74 78 58 78 42a28 28 0 1 0-56 0c0 16 10 32 28 50Z" /><circle cx="50" cy="41" r="9" /></svg>
+                Blue Ash, OH
+              </p>
+              <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold">
+                Browse Job
+                <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+              </a>
+            </li>
+
+            <li class="ink-card group flex h-full flex-col bg-paper p-6 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex size-14 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red text-ink" aria-hidden="true">
+                  <svg class="size-9" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+                </span>
+                <span class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-extrabold">Remote</span>
+              </div>
+              <h3 class="mt-5 text-xl font-extrabold leading-snug">Splunk DBA</h3>
+              <p class="mt-2 flex items-center gap-2 text-sm font-bold text-ink/65">
+                <svg class="size-4 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M50 92C68 74 78 58 78 42a28 28 0 1 0-56 0c0 16 10 32 28 50Z" /><circle cx="50" cy="41" r="9" /></svg>
+                Remote Work
+              </p>
+              <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold">
+                Browse Job
+                <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+              </a>
+            </li>
+
+            <li class="ink-card group flex h-full flex-col bg-paper p-6 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex size-14 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow text-ink" aria-hidden="true">
+                  <svg class="size-9" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+                </span>
+                <span class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-extrabold">Hybrid</span>
+              </div>
+              <h3 class="mt-5 text-xl font-extrabold leading-snug">Project Coordinator</h3>
+              <p class="mt-2 flex items-center gap-2 text-sm font-bold text-ink/65">
+                <svg class="size-4 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M50 92C68 74 78 58 78 42a28 28 0 1 0-56 0c0 16 10 32 28 50Z" /><circle cx="50" cy="41" r="9" /></svg>
+                Boston, MA
+              </p>
+              <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold">
+                Browse Job
+                <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+              </a>
+            </li>
+
+            <li class="ink-card group flex h-full flex-col bg-paper p-6 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex size-14 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue text-ink" aria-hidden="true">
+                  <svg class="size-9" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+                </span>
+                <span class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-extrabold">Hybrid</span>
+              </div>
+              <h3 class="mt-5 text-xl font-extrabold leading-snug">Testing Lead</h3>
+              <p class="mt-2 flex items-center gap-2 text-sm font-bold text-ink/65">
+                <svg class="size-4 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M50 92C68 74 78 58 78 42a28 28 0 1 0-56 0c0 16 10 32 28 50Z" /><circle cx="50" cy="41" r="9" /></svg>
+                Boston, MA
+              </p>
+              <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold">
+                Browse Job
+                <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+              </a>
+            </li>
+
+            <li class="ink-card group flex h-full flex-col bg-paper p-6 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex size-14 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red text-ink" aria-hidden="true">
+                  <svg class="size-9" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+                </span>
+                <span class="rounded-pill border-[3px] border-ink bg-white px-3 py-1 text-xs font-extrabold">Remote</span>
+              </div>
+              <h3 class="mt-5 text-xl font-extrabold leading-snug">SAP Concur Travel &amp; Expense Lead Consultant</h3>
+              <p class="mt-2 flex items-center gap-2 text-sm font-bold text-ink/65">
+                <svg class="size-4 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M50 92C68 74 78 58 78 42a28 28 0 1 0-56 0c0 16 10 32 28 50Z" /><circle cx="50" cy="41" r="9" /></svg>
+                Remote Work
+              </p>
+              <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold">
+                Browse Job
+                <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Profile showcase -->
+      <section id="profile" class="scroll-mt-28 border-b-[3px] border-ink py-16 sm:py-20">
+        <div class="container-page">
+          <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-pop-red">Introducing</p>
+              <h2 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Make Your Mark: Your Profile is Your Story</h2>
+              <p class="mt-4 text-base font-medium leading-relaxed text-ink/70">
+                Tell your professional story and land your dream job with a profile that stands out.
+              </p>
+
+              <ul class="mt-8 space-y-4">
+                <li class="flex gap-4">
+                  <span class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                    <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="m18 52 22 22 42-50" /></svg>
+                  </span>
+                  <p class="text-sm font-semibold text-ink/80">Upload your resume once and apply to any role in a single click.</p>
+                </li>
+                <li class="flex gap-4">
+                  <span class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                    <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="m18 52 22 22 42-50" /></svg>
+                  </span>
+                  <p class="text-sm font-semibold text-ink/80">Get matched alerts the moment a role fits your skills and location.</p>
+                </li>
+                <li class="flex gap-4">
+                  <span class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                    <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="m18 52 22 22 42-50" /></svg>
+                  </span>
+                  <p class="text-sm font-semibold text-ink/80">Let recruiters find you with a profile built to be discovered.</p>
+                </li>
+              </ul>
+
+              <div class="mt-9 flex flex-wrap gap-4">
+                <a href="#" class="btn-ink">
+                  <svg class="size-5" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M50 66V16M30 36l20-20 20 20" /><path d="M16 66v12a8 8 0 0 0 8 8h52a8 8 0 0 0 8-8V66" /></svg>
+                  Upload Resume
+                </a>
+                <a href="#" class="btn-pop bg-white">
+                  <svg class="size-5" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M76 38a26 26 0 1 0-52 0c0 26-10 30-10 30h72s-10-4-10-30Z" /><path d="M42 82a9 9 0 0 0 16 0" /></svg>
+                  New Job Alert
+                </a>
+              </div>
+            </div>
+
+            <div class="relative mx-auto w-full max-w-md">
+              <span class="halftone absolute -left-4 -top-4 size-32 rounded-full opacity-30" aria-hidden="true"></span>
+              <div class="ink-card relative p-7 shadow-ink-lg">
+                <div class="flex items-center justify-between gap-4">
+                  <p class="text-sm font-extrabold">Complete your profile</p>
+                  <span class="text-sm font-extrabold text-pop-red">95%</span>
+                </div>
+                <div class="mt-3 h-5 w-full overflow-hidden rounded-pill border-[3px] border-ink bg-white">
+                  <div
+                    class="h-full w-[95%] bg-pop-yellow"
+                    role="progressbar"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-label="Profile completion"
+                  ></div>
+                </div>
+
+                <div class="mt-7 flex items-center gap-5">
+                  <span class="halftone flex size-20 shrink-0 items-center justify-center rounded-full border-[3px] border-ink bg-white" aria-hidden="true">
+                    <svg class="size-16 text-ink" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+                  </span>
+                  <div>
+                    <p class="text-xl font-extrabold">Alex Kim</p>
+                    <p class="text-sm font-bold text-ink/60">UI/UX Designer</p>
+                  </div>
+                </div>
+
+                <ul class="mt-6 flex flex-wrap gap-2">
+                  <li class="rounded-pill border-[3px] border-ink px-3 py-1 text-xs font-bold">Figma</li>
+                  <li class="rounded-pill border-[3px] border-ink px-3 py-1 text-xs font-bold">Design Systems</li>
+                  <li class="rounded-pill border-[3px] border-ink px-3 py-1 text-xs font-bold">Prototyping</li>
+                  <li class="rounded-pill border-[3px] border-ink px-3 py-1 text-xs font-bold">User Research</li>
+                </ul>
+
+                <div class="mt-7 grid grid-cols-3 gap-3 border-t-[3px] border-ink pt-6 text-center">
+                  <div>
+                    <p class="text-2xl font-extrabold">24</p>
+                    <p class="mt-0.5 text-xs font-bold text-ink/60">Applications</p>
+                  </div>
+                  <div>
+                    <p class="text-2xl font-extrabold">9</p>
+                    <p class="mt-0.5 text-xs font-bold text-ink/60">Interviews</p>
+                  </div>
+                  <div>
+                    <p class="text-2xl font-extrabold">142</p>
+                    <p class="mt-0.5 text-xs font-bold text-ink/60">Profile views</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn-ink mt-7 w-full">Hire Me!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sponsored Companies -->
+      <section id="companies" class="scroll-mt-28 border-b-[3px] border-ink bg-white py-16 sm:py-20">
+        <div class="container-page">
+          <div class="max-w-2xl">
+            <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-pop-blue">Top Recruiters</p>
+            <h2 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Sponsored Companies</h2>
+            <p class="mt-4 text-base font-medium text-ink/70">Teams actively hiring on Kloudhire this month.</p>
+          </div>
+
+          <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="none">
+                    <rect width="24" height="24" rx="5" fill="#0A66C2" />
+                    <path fill="#fff" d="M8.15 9.4H6.05v7.8h2.1V9.4ZM7.1 6.1a1.22 1.22 0 1 0 0 2.44 1.22 1.22 0 0 0 0-2.44ZM17.95 17.2h-2.1v-3.9c0-.93-.02-2.12-1.3-2.12-1.29 0-1.49 1-1.49 2.05v3.97h-2.1V9.4h2.02v1.06h.03c.28-.53.96-1.1 1.98-1.1 2.12 0 2.51 1.4 2.51 3.21v4.63Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">LinkedIn</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-7" viewBox="0 0 24 24" fill="#111111">
+                    <path d="M16.2 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.8-3.5.8-.8 0-1.9-.8-3.1-.8-1.6 0-3.1 1-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.1 1.7 2.4 3 2.3 1.2 0 1.6-.8 3.1-.8s1.8.8 3.1.8c1.3 0 2.1-1.1 2.9-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.6-1-2.6-4.1ZM14.6 6.3c.6-.8 1.1-1.9.9-3-1 .1-2.2.7-2.9 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.3-.6 3-1.4Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Apple Inc.</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" fill="#00A651" />
+                    <path fill="#fff" d="M12.2 5.2c2.4 1.8 4.4 4.6 4.4 7.6 0 2.8-1.8 5-4.4 6-2.6-1-4.4-3.2-4.4-6 0-3 2-5.8 4.4-7.6Z" />
+                    <path fill="#00A651" d="M12.2 8.1c1.3 1.1 2.3 2.7 2.3 4.4 0 1.6-1 2.9-2.3 3.5-1.3-.6-2.3-1.9-2.3-3.5 0-1.7 1-3.3 2.3-4.4Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Saudi Aramco</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-white" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M21.6 12.23c0-.74-.07-1.45-.19-2.13H12v4.03h5.38a4.6 4.6 0 0 1-2 3.02v2.5h3.23c1.89-1.74 2.99-4.31 2.99-7.42Z" />
+                    <path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.62-2.35l-3.23-2.5c-.9.6-2.04.96-3.39.96-2.61 0-4.82-1.76-5.61-4.13H3.06v2.58A10 10 0 0 0 12 22Z" />
+                    <path fill="#FBBC05" d="M6.39 13.98A6 6 0 0 1 6.07 12c0-.69.12-1.35.32-1.98V7.44H3.06A10 10 0 0 0 2 12c0 1.61.39 3.14 1.06 4.56l3.33-2.58Z" />
+                    <path fill="#EA4335" d="M12 5.9c1.47 0 2.79.5 3.83 1.5l2.87-2.87C16.95 2.9 14.7 2 12 2A10 10 0 0 0 3.06 7.44l3.33 2.58C7.18 7.65 9.39 5.9 12 5.9Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Alphabet Inc.</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="none">
+                    <path fill="#232F3E" d="M8.7 6.8c2 0 3.3 1.2 3.3 3.5v6.1h-2V15c-.5.9-1.4 1.4-2.5 1.4-1.8 0-3.1-1.3-3.1-3.1 0-1.9 1.4-3.2 3.3-3.2 1 0 1.8.4 2.2 1V10c0-1.1-.7-1.8-1.9-1.8-.9 0-1.6.4-1.9 1.1L4.8 8.1c.7-1.1 2-1.3 3.9-1.3Zm-.4 8.1c.9 0 1.7-.6 2-1.5v-.6c-.3-.8-1.1-1.4-2-1.4-.9 0-1.6.7-1.6 1.7 0 1 .7 1.8 1.6 1.8Z" />
+                    <path fill="none" stroke="#FF9900" stroke-width="1.4" stroke-linecap="round" d="M5.8 18.2c2.6 1.6 7.2 1.7 10.2.2" />
+                    <path fill="#FF9900" d="M16.6 17.4c.5 1.1 1.3 1.6 1.4 1.7-.1.1-.9.5-1.9.3-.4-.9-.3-1.8.5-2Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Amazon.com Inc.</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="#E31937">
+                    <path d="M2.8 6.4h18.4L12 8.9 2.8 6.4Zm8.1 2.2h2.2v11H10.9V8.6Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Tesla Inc.</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="none">
+                    <rect width="24" height="24" rx="5" fill="#76B900" />
+                    <path fill="#fff" d="M7.2 15.6 12 8.4l4.8 7.2h-2.1L12 11.4l-2.7 4.2H7.2Zm.9 1.6h7.8v1.4H8.1v-1.4Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">NVIDIA Corp.</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-white" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="none">
+                    <rect width="24" height="24" rx="5" fill="#1B365D" />
+                    <path fill="#C4A35A" d="M12 5.2 17.8 8v3.1c0 3.5-2.3 6.7-5.8 7.7-3.5-1-5.8-4.2-5.8-7.7V8L12 5.2Z" />
+                    <path fill="#1B365D" d="M10.2 11.1h1.1v3.6h1.4v-3.6h1.1V9.8h-3.6v1.3Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Hathaway Inc.</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="none">
+                    <rect width="24" height="24" rx="5" fill="#76B900" />
+                    <path fill="#fff" d="M7.2 15.6 12 8.4l4.8 7.2h-2.1L12 11.4l-2.7 4.2H7.2Zm.9 1.6h7.8v1.4H8.1v-1.4Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">NVIDIA Corp</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="none">
+                    <path fill="#0668E1" d="M8.2 7.4c-2.1 0-3.8 1.9-3.8 4.8s1.8 4.8 4 4.8c1 0 1.9-.4 2.6-1.2.6.8 1.5 1.2 2.6 1.2 2.2 0 4-1.9 4-4.8s-1.7-4.8-3.8-4.8c-1 0-1.9.4-2.6 1.2-.7-.8-1.6-1.2-3-1.2Zm.3 2.4c.5 0 .9.3 1.4.9l1.2 1.6 1.2-1.6c.5-.6.9-.9 1.4-.9.8 0 1.6.9 1.6 2.4s-.8 2.4-1.6 2.4c-.4 0-.9-.2-1.3-.8L11 13.3l-1.4 1.9c-.4.6-.9.8-1.3.8-.8 0-1.7-.9-1.7-2.4s.9-2.4 1.9-2.4Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Meta Platforms</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="none">
+                    <rect width="24" height="24" rx="6" fill="#FF0000" />
+                    <path fill="#fff" d="M10 8.2 16.4 12 10 15.8V8.2Z" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">YouTube</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-white" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24" fill="none">
+                    <defs>
+                      <radialGradient id="ig-grad-doodle" cx="30%" cy="107%" r="150%">
+                        <stop offset="0%" stop-color="#fdf497" />
+                        <stop offset="5%" stop-color="#fdf497" />
+                        <stop offset="45%" stop-color="#fd5949" />
+                        <stop offset="60%" stop-color="#d6249f" />
+                        <stop offset="90%" stop-color="#285AEB" />
+                      </radialGradient>
+                    </defs>
+                    <rect width="24" height="24" rx="6" fill="url(#ig-grad-doodle)" />
+                    <rect x="6.5" y="6.5" width="11" height="11" rx="3.2" stroke="#fff" stroke-width="1.6" />
+                    <circle cx="12" cy="12" r="2.6" stroke="#fff" stroke-width="1.6" />
+                    <circle cx="15.7" cy="8.3" r=".9" fill="#fff" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Instagram</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24">
+                    <rect width="24" height="24" rx="5" fill="#003DA5" />
+                    <text x="12" y="16.4" text-anchor="middle" fill="#fff" font-size="11" font-weight="800" font-family="ui-sans-serif, system-ui, sans-serif">M</text>
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">McKesson</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-8" viewBox="0 0 24 24">
+                    <rect width="24" height="24" rx="5" fill="#ED1C24" />
+                    <text x="12" y="16.4" text-anchor="middle" fill="#fff" font-size="11" font-weight="800" font-family="ui-sans-serif, system-ui, sans-serif">F</text>
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Foxconn</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+            <li class="ink-card flex flex-col items-center p-5 text-center transition-transform hover:-translate-y-1">
+              <span class="flex size-16 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                <span class="flex size-11 items-center justify-center overflow-hidden rounded-full bg-white">
+                  <svg class="size-7" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="9.4" height="9.4" fill="#F25022" />
+                    <rect x="12.6" y="2" width="9.4" height="9.4" fill="#7FBA00" />
+                    <rect x="2" y="12.6" width="9.4" height="9.4" fill="#00A4EF" />
+                    <rect x="12.6" y="12.6" width="9.4" height="9.4" fill="#FFB900" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-4 text-sm font-extrabold">Microsoft</h3>
+              <p class="mt-1 text-xs font-bold text-ink/60">New York, US</p>
+              <div class="mt-3 flex items-center gap-3 text-xs">
+                <span class="rounded-pill border-[3px] border-ink px-2.5 py-0.5 font-extrabold">25 Jobs</span>
+                <span class="flex items-center gap-1 font-bold text-ink/70">
+                  <svg class="size-4" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" aria-hidden="true"><path d="m50 12 12 24 26 4-19 18 5 26-24-13-24 13 5-26-19-18 26-4Z" /></svg>
+                  68
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Career Advisor -->
+      <section id="advisor" class="scroll-mt-28 border-b-[3px] border-ink py-16 sm:py-20">
+        <div class="container-page">
+          <div class="ink-card overflow-hidden shadow-ink-lg">
+            <div class="grid items-center gap-10 p-8 sm:p-12 lg:grid-cols-2 lg:gap-14">
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-pop-red">Nail Your Interview</p>
+                <h2 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Career Advisor</h2>
+                <p class="mt-4 text-base font-medium leading-relaxed text-ink/70">
+                  Master common questions and company-specific insights to ace your interview.
+                </p>
+                <a href="#" class="btn-ink mt-8">
+                  Read More
+                  <svg class="size-5" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 50h64M56 26l24 24-24 24" /></svg>
+                </a>
+              </div>
+
+              <ul class="grid gap-5 sm:grid-cols-2">
+                <li class="rounded-2xl border-[3px] border-ink bg-paper p-5">
+                  <span class="flex size-12 items-center justify-center rounded-full border-[3px] border-ink bg-pop-red" aria-hidden="true">
+                    <svg class="size-6" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M34 42a16 16 0 1 1 22 15v9H44v-9" /><path d="M40 78h20M42 88h16" />
+                    </svg>
+                  </span>
+                  <h3 class="mt-4 text-base font-extrabold">Common questions</h3>
+                  <p class="mt-1 text-sm font-medium text-ink/70">Answer frameworks for the questions every panel asks.</p>
+                </li>
+                <li class="rounded-2xl border-[3px] border-ink bg-paper p-5">
+                  <span class="flex size-12 items-center justify-center rounded-full border-[3px] border-ink bg-pop-blue" aria-hidden="true">
+                    <svg class="size-6" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 26h72v44H50L30 86V70H14Z" />
+                    </svg>
+                  </span>
+                  <h3 class="mt-4 text-base font-extrabold">Company insights</h3>
+                  <p class="mt-1 text-sm font-medium text-ink/70">Know the culture and process before you walk in.</p>
+                </li>
+                <li class="rounded-2xl border-[3px] border-ink bg-paper p-5">
+                  <span class="flex size-12 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                    <svg class="size-6" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M24 12h34l20 20v56H24Z" /><path d="M56 12v22h22M38 56h26M38 70h18" />
+                    </svg>
+                  </span>
+                  <h3 class="mt-4 text-base font-extrabold">Resume reviews</h3>
+                  <p class="mt-1 text-sm font-medium text-ink/70">Sharpen your resume against the role you want.</p>
+                </li>
+                <li class="rounded-2xl border-[3px] border-ink bg-paper p-5">
+                  <span class="flex size-12 items-center justify-center rounded-full border-[3px] border-ink bg-white" aria-hidden="true">
+                    <svg class="size-6" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="50" cy="50" r="30" /><circle cx="50" cy="50" r="12" /><path d="M50 8v12M50 80v12M8 50h12M80 50h12" />
+                    </svg>
+                  </span>
+                  <h3 class="mt-4 text-base font-extrabold">Salary guidance</h3>
+                  <p class="mt-1 text-sm font-medium text-ink/70">Negotiate with real market benchmarks in hand.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Premium CTA -->
+      <section id="premium" class="scroll-mt-28 border-b-[3px] border-ink bg-ink py-16 text-white sm:py-20">
+        <div class="container-page">
+          <div class="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-pop-yellow">Time is Money</p>
+              <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Get Hired Faster with Kloudhire Premium</h2>
+              <p class="mt-4 max-w-xl text-base font-medium leading-relaxed text-white/75">
+                Streamline your search, optimize your resume, and find the perfect job — all with
+                Kloudhire Premium.
+              </p>
+              <div class="mt-8 flex flex-wrap gap-4">
+                <a href="#featured" class="btn-pop shadow-[4px_4px_0_#fff]">Search Jobs</a>
+                <a href="#" class="btn-ink border-white bg-transparent shadow-[4px_4px_0_#fff] hover:bg-white/10">Go Premium</a>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center gap-4 lg:justify-end">
+              <span class="flex size-20 items-center justify-center rounded-full border-[3px] border-white bg-pop-red text-white sm:size-24" aria-hidden="true">
+                <svg class="size-14" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M36 44a14 14 0 1 1 28 0c0 8-6 11-6 18H42c0-7-6-10-6-18Z" /><path d="M42 70h16M44 78h12" />
+                </svg>
+              </span>
+              <span class="flex size-20 items-center justify-center rounded-full border-[3px] border-white bg-white text-ink sm:size-24" aria-hidden="true">
+                <svg class="size-16" viewBox="0 0 100 100"><use href="#doodle-face" /></svg>
+              </span>
+              <span class="flex size-20 items-center justify-center rounded-full border-[3px] border-white bg-pop-blue text-white sm:size-24" aria-hidden="true">
+                <svg class="size-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="18" y="18" width="64" height="64" rx="4" /><path d="m32 52 13 14 24-30" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-paper">
+      <div class="container-page py-14">
+        <div class="grid gap-10 lg:grid-cols-5">
+          <div class="lg:col-span-2">
+            <a href="#" class="flex items-center gap-3">
+              <span class="flex size-11 items-center justify-center rounded-full border-[3px] border-ink bg-pop-yellow" aria-hidden="true">
+                <svg class="size-6" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M72 74c11 0 18-8 18-17s-8-16-17-16c-3-15-15-23-28-23-16 0-27 12-27 27-10 1-16 8-16 16s7 13 16 13z" />
+                </svg>
+              </span>
+              <span class="text-2xl font-extrabold tracking-tight">Kloudhire</span>
+            </a>
+            <p class="mt-4 max-w-sm text-sm font-medium leading-relaxed text-ink/70">
+              Skip the Search, Spark Your Career: Kloudhire Connects You to Opportunities.
+            </p>
+            <ul class="mt-6 space-y-3 text-sm font-semibold">
+              <li class="flex gap-3">
+                <svg class="mt-0.5 size-4 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M50 92C68 74 78 58 78 42a28 28 0 1 0-56 0c0 16 10 32 28 50Z" /><circle cx="50" cy="41" r="9" /></svg>
+                <span>44790 S Grimmer Blvd, Ste 103, Fremont, CA 94538</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 size-4 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="22" width="80" height="56" rx="6" /><path d="m12 28 38 26 38-26" /></svg>
+                <a class="hover:text-pop-red" href="mailto:support@kloudhire.com">support@kloudhire.com</a>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 size-4 shrink-0" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 14h18l8 22-11 7a46 46 0 0 0 22 22l7-11 22 8v18a4 4 0 0 1-5 4A68 68 0 0 1 14 19a4 4 0 0 1 4-5Z" /></svg>
+                <a class="hover:text-pop-red" href="tel:+15103770404">+1-510-377-0404</a>
+              </li>
+            </ul>
+          </div>
+
+          <nav aria-label="For candidates">
+            <h2 class="text-sm font-extrabold uppercase tracking-wide">For Candidate</h2>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-ink/70">
+              <li><a class="hover:text-pop-red" href="#featured">Job Search</a></li>
+            </ul>
+            <h2 class="mt-8 text-sm font-extrabold uppercase tracking-wide">For Employers</h2>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-ink/70">
+              <li><a class="hover:text-pop-red" href="#">Post a New Job</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Helpful resources">
+            <h2 class="text-sm font-extrabold uppercase tracking-wide">Helpful Resources</h2>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-ink/70">
+              <li><a class="hover:text-pop-red" href="#">Login</a></li>
+              <li><a class="hover:text-pop-red" href="#">Register</a></li>
+              <li><a class="hover:text-pop-red" href="#">Services</a></li>
+              <li><a class="hover:text-pop-red" href="#advisor">Career Advisor</a></li>
+              <li><a class="hover:text-pop-red" href="#">Terms &amp; Conditions</a></li>
+              <li><a class="hover:text-pop-red" href="#">Privacy Policy</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Quick links">
+            <h2 class="text-sm font-extrabold uppercase tracking-wide">Quick Links</h2>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-ink/70">
+              <li><a class="hover:text-pop-red" href="#">Home</a></li>
+              <li><a class="hover:text-pop-red" href="#">About Us</a></li>
+              <li><a class="hover:text-pop-red" href="#featured">Job List</a></li>
+              <li><a class="hover:text-pop-red" href="#">Blog</a></li>
+              <li><a class="hover:text-pop-red" href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="mt-12 border-t-[3px] border-ink pt-6">
+          <p class="text-sm font-bold text-ink/60">Copyright &copy; 2026 by Kloudhire. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile nav sheet
+      const navToggle = document.querySelector("[data-nav-toggle]");
+      const mobileMenu = document.getElementById("mobile-menu");
+      navToggle.addEventListener("click", () => {
+        const open = mobileMenu.classList.toggle("hidden") === false;
+        navToggle.setAttribute("aria-expanded", String(open));
+        navToggle.querySelector("[data-nav-icon-open]").classList.toggle("hidden", open);
+        navToggle.querySelector("[data-nav-icon-close]").classList.toggle("hidden", !open);
+      });
+
+      // Jobs dropdown
+      const dropdown = document.querySelector("[data-dropdown]");
+      const trigger = dropdown.querySelector("[data-dropdown-trigger]");
+      const menu = dropdown.querySelector("[data-dropdown-menu]");
+      const chevron = dropdown.querySelector("[data-dropdown-chevron]");
+      const setDropdown = (open) => {
+        menu.classList.toggle("hidden", !open);
+        chevron.classList.toggle("rotate-180", open);
+        trigger.setAttribute("aria-expanded", String(open));
+      };
+      trigger.addEventListener("click", () => setDropdown(menu.classList.contains("hidden")));
+      document.addEventListener("click", (event) => {
+        if (!dropdown.contains(event.target)) setDropdown(false);
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setDropdown(false);
+      });
+    </script>
+  </body>
+</html>
