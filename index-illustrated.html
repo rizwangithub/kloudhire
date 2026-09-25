@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./dist/output.css" />
@@ -357,7 +357,7 @@
       </section>
 
       <!-- Featured Openings -->
-      <section id="featured" class="scroll-mt-28 border-b-[3px] border-ink bg-white py-16 sm:py-20">
+      <section id="featured" class="defer-render scroll-mt-28 border-b-[3px] border-ink bg-white py-16 sm:py-20">
         <div class="container-page">
           <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div class="max-w-2xl">
@@ -483,7 +483,7 @@
       </section>
 
       <!-- Profile showcase -->
-      <section id="profile" class="scroll-mt-28 border-b-[3px] border-ink py-16 sm:py-20">
+      <section id="profile" class="defer-render scroll-mt-28 border-b-[3px] border-ink py-16 sm:py-20">
         <div class="container-page">
           <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
@@ -584,7 +584,7 @@
       </section>
 
       <!-- Sponsored Companies -->
-      <section id="companies" class="scroll-mt-28 border-b-[3px] border-ink bg-white py-16 sm:py-20">
+      <section id="companies" class="defer-render scroll-mt-28 border-b-[3px] border-ink bg-white py-16 sm:py-20">
         <div class="container-page">
           <div class="max-w-2xl">
             <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-pop-blue">Top Recruiters</p>
@@ -898,7 +898,7 @@
       </section>
 
       <!-- Career Advisor -->
-      <section id="advisor" class="scroll-mt-28 border-b-[3px] border-ink py-16 sm:py-20">
+      <section id="advisor" class="defer-render scroll-mt-28 border-b-[3px] border-ink py-16 sm:py-20">
         <div class="container-page">
           <div class="ink-card overflow-hidden shadow-ink-lg">
             <div class="grid items-center gap-10 p-8 sm:p-12 lg:grid-cols-2 lg:gap-14">
@@ -958,7 +958,7 @@
       </section>
 
       <!-- Premium CTA -->
-      <section id="premium" class="scroll-mt-28 border-b-[3px] border-ink bg-ink py-16 text-white sm:py-20">
+      <section id="premium" class="defer-render scroll-mt-28 border-b-[3px] border-ink bg-ink py-16 text-white sm:py-20">
         <div class="container-page">
           <div class="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
             <div>
@@ -981,9 +981,10 @@
                   src="./assets/premium-illustration.png"
                   alt="Illustrated job seeker holding a starred resume, surrounded by a stopwatch, a rocket, a smiling face and an approved job offer"
                   class="block w-full"
-                  width="1152"
-                  height="864"
+                  width="900"
+                  height="675"
                   loading="lazy"
+                  decoding="async"
                 />
               </figure>
             </div>
@@ -993,7 +994,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-paper">
+    <footer class="defer-render bg-paper">
       <div class="container-page py-14">
         <div class="grid gap-10 lg:grid-cols-5">
           <div class="lg:col-span-2">
